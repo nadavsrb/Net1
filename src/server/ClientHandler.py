@@ -1,7 +1,8 @@
-from abc import ABC, abstractmethod
+from abc import ABCMeta, abstractmethod
 
 
-class ClientHandler(ABC):
+class ClientHandler:
+    __metaclass__ = ABCMeta
 
     @abstractmethod
     def handleClient(self, input):

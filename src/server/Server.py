@@ -1,7 +1,8 @@
-from abc import ABC, abstractmethod
+from abc import ABCMeta, abstractmethod
 
 
-class Server(ABC):
+class Server():
+    __metaclass__ = ABCMeta
 
     @abstractmethod
     def start(self, port, ch):

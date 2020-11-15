@@ -11,5 +11,6 @@ class IPBookHandler(ClientHandler):
 
         if output == self.__fm.NO_LINE_FOUND:
             output = self.__pm.askParent()
+            self.__fm.addLine(output)
 
         return output
