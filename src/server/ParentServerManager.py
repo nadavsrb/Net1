@@ -11,6 +11,9 @@ class ParentServerManager(ParentManager):
         self.__parentPort = parentPort
 
     def askParent(self, input):
+        if self.__parentIP == -1 or self.__parentPort == -1:
+            return "Info wasn't found"
+
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
         s.sendto(input, (self.__parentIP, self.__parentPort))
