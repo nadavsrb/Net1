@@ -6,8 +6,8 @@ class FileManager:
 
     NO_LINE_FOUND = ""
 
-    def getLine(self, key):
+    def getLine(self, key: str):
         pass
 
-    def addLine(self, line):
+    def addLine(self, line: str):
         pass

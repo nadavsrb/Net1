@@ -7,10 +7,10 @@ from src.server.TTLCollector import TTLCollector
 class FullTTLCollector(TTLCollector):
     CHAR_BEFORE_TTL = ','
 
-    def __init__(self, ipsFileName):
+    def __init__(self, ipsFileName: str):
         self.__ipsFileName = ipsFileName
 
-    def isTTLPassed(self, line):
+    def isTTLPassed(self, line: str):
         line = line.rstrip('\n')
 
         dateIndex = line.find(ServerDataManager.CHAR_BEFORE_DATE)

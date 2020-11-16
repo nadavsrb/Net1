@@ -5,5 +5,5 @@ class ClientHandler:
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def handleClient(self, input):
+    def handleClient(self, input: str):
         pass

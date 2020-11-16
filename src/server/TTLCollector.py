@@ -5,7 +5,7 @@ class TTLCollector:
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def isTTLPassed(self, line):
+    def isTTLPassed(self, line: str):
         pass
 
     @abstractmethod

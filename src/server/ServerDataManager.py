@@ -1,16 +1,17 @@
 from datetime import datetime
 
 from src.server.FileManager import FileManager
+from src.server.TTLCollector import TTLCollector
 
 
 class ServerDataManager(FileManager):
     CHAR_BEFORE_DATE = '|'
 
-    def __init__(self, ipsFileName, col):
+    def __init__(self, ipsFileName: str, col: TTLCollector):
         self.__ipsFileName = ipsFileName
         self.__col = col
 
-    def getLine(self, key):
+    def getLine(self, key: str):
         with open(self.__ipsFileName) as IPBook:
             for line in IPBook:
                 if line.startswith(key):
@@ -26,7 +27,7 @@ class ServerDataManager(FileManager):
 
         return self.NO_LINE_FOUND
 
-    def addLine(self, line):
+    def addLine(self, line: str):
         self.__col.clean()
 
         with open(self.__ipsFileName, 'a') as IPBook:

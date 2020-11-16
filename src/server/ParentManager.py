@@ -5,5 +5,5 @@ class ParentManager:
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def askParent(self, input):
+    def askParent(self, input: str):
         pass
