@@ -1,8 +1,8 @@
-from abc import ABC, abstractmethod
+from abc import ABCMeta, abstractmethod
 
 
 class ParentManager:
-    __metaclass__ = ABC
+    __metaclass__ = ABCMeta
 
     @abstractmethod
     def askParent(self, input):
