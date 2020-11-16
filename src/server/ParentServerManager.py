@@ -20,4 +20,4 @@ class ParentServerManager(ParentManager):
         data, addr = s.recvfrom(self.BUFFER_SIZE)
 
         s.close()
-        return data
+        return str(data)
