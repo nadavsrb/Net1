@@ -12,6 +12,7 @@ class ServerDataManager(FileManager):
         self.__col = col
 
     def getLine(self, key: str):
+        key += ','
         with open(self.__ipsFileName) as IPBook:
             for line in IPBook:
                 if line.startswith(key):

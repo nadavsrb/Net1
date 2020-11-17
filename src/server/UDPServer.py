@@ -16,6 +16,6 @@ class UDPServer(Server):
         while True:
             data, addr = s.recvfrom(self.BUFFER_SIZE)
 
-            ans = ch.handleClient(str(data))
+            ans = ch.handleClient(data.decode())
 
-            s.sendto(ans, addr)
+            s.sendto(ans.encode(), addr)

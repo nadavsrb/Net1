@@ -12,11 +12,11 @@ class ParentServerManager(ParentManager):
 
     def askParent(self, input: str):
         if self.__parentIP == "-1" or self.__parentPort == -1:
-            return "Info wasn't found"
+            return self.NOT_FOUND_INFO
 
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-        s.sendto(bytes(input), (self.__parentIP, self.__parentPort))
+        s.sendto(input.encode(), (self.__parentIP, self.__parentPort))
         data, addr = s.recvfrom(self.BUFFER_SIZE)
 
         s.close()
