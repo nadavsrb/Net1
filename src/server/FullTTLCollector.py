@@ -24,13 +24,16 @@ class FullTTLCollector(TTLCollector):
         if ttlIndex == -1:
             return True
 
-        ttl = int(line[++ttlIndex: dateIndex])
-        dateIn = datetime.strptime(line[++dateIndex:], '%Y-%m-%d %H:%M:%S.%f')
+        ttlIndex += 1
+        ttl = int(line[ttlIndex: dateIndex])
+
+        dateIndex += 1
+        dateIn = datetime.strptime(line[dateIndex:], '%Y-%m-%d %H:%M:%S.%f')
 
         dateOut = dateIn + timedelta(seconds=ttl)
         now = datetime.now()
 
-        if dateOut > now:
+        if dateOut < now:
             return True
 
         return False
