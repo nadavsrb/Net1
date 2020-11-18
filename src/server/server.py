@@ -24,8 +24,8 @@ def main(argv):
 
     ipsFileName = argv[3]
     if not os.path.isfile(ipsFileName):
-        raise RuntimeError("ERROR: make sure the ips file path is accordingly to" +
-                           "where u run the server from the location u put is " + ipsFileName + "\n")
+        raise RuntimeError("ERROR: make sure the ips file path is accordingly to " +
+                           "where u run the server. the location u put is: " + ipsFileName + "\n")
 
     col = FullTTLCollector(ipsFileName)
     fm = ServerDataManager(ipsFileName, col)

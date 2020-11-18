@@ -1,0 +1,3 @@
+parent2.a.co.il,10.10.2.5,30
+parent2.b.co.il,7.7.7.7,5
+parent2.c.co.il,6.1.2.8,280
