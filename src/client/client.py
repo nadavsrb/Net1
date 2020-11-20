@@ -22,7 +22,7 @@ class Client:
         pass
 
 
-# This class stands to UDP Client.
+# This class stands for UDP Client.
 class UDPClient(Client):
     BUFFER_SIZE = 1024
 
@@ -97,7 +97,7 @@ class ClientTask(Task):
         print(ans[firstIndex:lastIndex])
 
 
-"""******************MAIN METHOD******************"""
+"""******************MAIN FUNCTION******************"""
 
 
 def main(argv):
