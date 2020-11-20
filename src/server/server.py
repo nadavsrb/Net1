@@ -36,5 +36,7 @@ def main(argv):
     server.start(myPort, ch)
 
 
+# Tells the program from where to start running.
 if __name__ == "__main__":
+    # Passing to the main only the args from the user.
     main(sys.argv[1:])
