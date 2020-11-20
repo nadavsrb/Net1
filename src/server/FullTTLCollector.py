@@ -45,4 +45,7 @@ class FullTTLCollector(TTLCollector):
         with open(self.__ipsFileName, "w") as IPBook:
             for line in lines:
                 if not self.isTTLPassed(line):
+                    line = line.rstrip('\n')
+                    line += '\n'
+
                     IPBook.write(line)
